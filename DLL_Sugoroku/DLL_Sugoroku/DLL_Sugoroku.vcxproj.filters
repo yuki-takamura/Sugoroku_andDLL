@@ -27,6 +27,9 @@
     <ClInclude Include="DLL_Sugoroku.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConstantMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

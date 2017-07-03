@@ -3,7 +3,9 @@
 
 #include "stdafx.h"
 #include "DLL_Sugoroku.h"
+#include <iostream>
 
+using namespace std;
 
 // This is an example of an exported variable
 DLL_SUGOROKU_API int nDLL_Sugoroku=0;
@@ -21,7 +23,12 @@ CDLL_Sugoroku::CDLL_Sugoroku()
     return;
 }
 
-int CDLL_Sugoroku::Add(int a, int b)
+int CDLL_Sugoroku::add(int a, int b)
 {
 	return a + b;
+}
+
+void CDLL_Sugoroku::run()
+{
+	cout << "Hello" << endl;
 }

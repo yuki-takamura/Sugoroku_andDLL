@@ -5,8 +5,11 @@ using namespace std;
 
 int main()
 {
-	CDLL_Sugoroku a;
+	CDLL_Sugoroku sugoroku;
 
-	cout << a.Add(2, 3) << endl;
+	cout << sugoroku.add(2, 3) << endl;
+
+	sugoroku.run();
+
 	return 0;
 }

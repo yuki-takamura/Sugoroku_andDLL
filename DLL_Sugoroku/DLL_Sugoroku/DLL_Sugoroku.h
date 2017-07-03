@@ -15,7 +15,8 @@ class DLL_SUGOROKU_API CDLL_Sugoroku {
 public:
 	CDLL_Sugoroku(void);
 	// TODO: add your methods here.
-	int Add(int a, int b);
+	int add(int a, int b);
+	void run();
 };
 
 extern DLL_SUGOROKU_API int nDLL_Sugoroku;

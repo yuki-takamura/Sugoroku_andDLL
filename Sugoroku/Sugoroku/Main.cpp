@@ -1,3 +1,5 @@
+//testttttttttttttttt
+
 #include <iostream>
 #include "DLL_Sugoroku.h"
 
@@ -9,8 +11,8 @@ int main()
 
 	sugoroku.run();
 
-	cout << sugoroku.checkTurn() << "‰ñ‚ÅƒS[ƒ‹‚µ‚Ü‚µ‚½" << endl;
+	cout << sugoroku.checkTurn() << "å›žã§ã‚´ãƒ¼ãƒ«ã—ã¾ã—ãŸ" << endl;
 
-	cout << "ƒGƒ“ƒ^[ƒL[“ü—Í‚ÅI—¹‚µ‚Ü‚·" << endl;
-	while (getchar() != '\n');//ƒGƒ“ƒ^[ƒL[“ü—Í‚ÅŽŸ‚ÉˆÚ‚é
+	cout << "ã‚¨ãƒ³ã‚¿ãƒ¼ã‚­ãƒ¼å…¥åŠ›ã§çµ‚äº†ã—ã¾ã™" << endl;
+	while (getchar() != '\n');//ã‚¨ãƒ³ã‚¿ãƒ¼ã‚­ãƒ¼å…¥åŠ›ã§æ¬¡ã«ç§»ã‚‹
 }

@@ -29,7 +29,7 @@ void CDLL_Sugoroku::run()
 			update();
 		draw();
 
-		while (getchar() != '\n');//ƒGƒ“ƒ^[ƒL[“ü—Í‚ÅŸ‚ÉˆÚ‚é
+		while (getchar() != '\n');//ã‚¨ãƒ³ã‚¿ãƒ¼ã‚­ãƒ¼å…¥åŠ›ã§æ¬¡ã«ç§»ã‚‹
 
 		if(turn < MAX_TURN)
 			turn++;
@@ -81,33 +81,35 @@ void CDLL_Sugoroku::update()
 {
 	int num = rand() % diceNum + 1;
 
-	cout << num << "‚ªo‚Ü‚µ‚½" << endl;
+	//ä¸€å›èª¿ã¹ãŸã‚“ã§ã™ãŒendlã¯å°‘ã—é‡ã„ã‚‰ã—ã„ã§ã™
+	//"\n"ã®æ–¹ãŒã‚ˆã„ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€€byèŠ±é«˜
+	cout << num << "ãŒå‡ºã¾ã—ãŸ" << endl;
 
 	if (!player.isPausing)
 	{
 		player.position += num;
 
-		//“Áêƒ}ƒX‚É~‚Ü‚Á‚Äs“®ŒãAÄ‚Ñ“Áêƒ}ƒX‚É~‚Ü‚Á‚Ä‚à
-		//‰½‚à‹N‚±‚ç‚È‚¢‚æ‚¤‚É‚·‚é
+		//ç‰¹æ®Šãƒã‚¹ã«æ­¢ã¾ã£ã¦è¡Œå‹•å¾Œã€å†ã³ç‰¹æ®Šãƒã‚¹ã«æ­¢ã¾ã£ã¦ã‚‚
+		//ä½•ã‚‚èµ·ã“ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹
 		bool canSquareAction = true;
 
 		if (canSquareAction && squareName[player.position] == "F")
 		{
-			cout << "Fƒ}ƒX‚É‚Æ‚Ü‚Á‚½‚Ì‚Å1ƒ}ƒXi‚İ‚Ü‚·" << endl;
+			cout << "Fãƒã‚¹ã«ã¨ã¾ã£ãŸã®ã§1ãƒã‚¹é€²ã¿ã¾ã™" << endl;
 			player.position++;
 			canSquareAction = false;
 		}
 
 		if (canSquareAction && squareName[player.position] == "B")
 		{
-			cout << "Bƒ}ƒX‚É‚Æ‚Ü‚Á‚½‚Ì‚Å1ƒ}ƒX–ß‚è‚Ü‚·" << endl;
+			cout << "Bãƒã‚¹ã«ã¨ã¾ã£ãŸã®ã§1ãƒã‚¹æˆ»ã‚Šã¾ã™" << endl;
 			player.position--;
 			canSquareAction = false;
 		}
 
 		if (canSquareAction && squareName[player.position] == "P")
 		{
-			cout << "Pƒ}ƒX‚É‚Æ‚Ü‚Á‚½‚Ì‚Åˆê‰ñ‹x‚İ‚Å‚·" << endl;
+			cout << "Pãƒã‚¹ã«ã¨ã¾ã£ãŸã®ã§ä¸€å›ä¼‘ã¿ã§ã™" << endl;
 			canSquareAction = false;
 			player.isPausing = true;
 		}
@@ -120,50 +122,50 @@ void CDLL_Sugoroku::update()
 	}
 	else
 	{
-		cout << "‚µ‚©‚µˆê‰ñ‹x‚İ‚È‚Ì‚Å“®‚«‚Ü‚¹‚ñ..." << endl;
+		cout << "ã—ã‹ã—ä¸€å›ä¼‘ã¿ãªã®ã§å‹•ãã¾ã›ã‚“..." << endl;
 		player.isPausing = false;
 	}
 }
 
 void CDLL_Sugoroku::draw()
 {
-	cout << " S : ƒXƒ^[ƒg@ G : ƒS[ƒ‹" << endl;
-	cout << " F : 1ƒ}ƒXi‚Ş@B : 1ƒ}ƒX–ß‚é@P : 1‰ñ‹x‚İ" << endl;
+	cout << " S : ã‚¹ã‚¿ãƒ¼ãƒˆã€€ G : ã‚´ãƒ¼ãƒ«" << endl;
+	cout << " F : 1ãƒã‚¹é€²ã‚€ã€€B : 1ãƒã‚¹æˆ»ã‚‹ã€€P : 1å›ä¼‘ã¿" << endl;
 
 	drawMap();
 	player.draw();
 
-	cout << "ƒGƒ“ƒ^[ƒL[“ü—Í‚ÅŸ‚És‚«‚Ü‚·" << endl;
+	cout << "ã‚¨ãƒ³ã‚¿ãƒ¼ã‚­ãƒ¼å…¥åŠ›ã§æ¬¡ã«è¡Œãã¾ã™" << endl;
 	cout << "------------------------------------------" << endl;
 }
 
 void CDLL_Sugoroku::drawMap()
 {
-	//ƒ}ƒX‚Ìã•”
-	cout << " „¬";
+	//ãƒã‚¹ã®ä¸Šéƒ¨
+	cout << " â”";
 
 	for (int i = 0; i < SQUARE_NUM - 1;i++)
 	{
-		cout << "„ª„±";
+		cout << "â”â”³";
 	}
 
-	cout << "„ª„­" << endl;
+	cout << "â”â”“" << endl;
 
-	//ƒ}ƒX‚Ì’†•”
-	cout << " „« " << squareName[Square::START];
+	//ãƒã‚¹ã®ä¸­éƒ¨
+	cout << " â”ƒ " << squareName[Square::START];
 	for (int i = 1; i < SQUARE_NUM - 1; i++)
 	{
-		cout << "„« " << squareName[i];
+		cout << "â”ƒ " << squareName[i];
 	}
-	cout << "„« " << squareName[SQUARE_NUM - 1] << "„«" << endl;
+	cout << "â”ƒ " << squareName[SQUARE_NUM - 1] << "â”ƒ" << endl;
 
-	//ƒ}ƒX‚Ì‰º•”
-	cout << " „¯";
+	//ãƒã‚¹ã®ä¸‹éƒ¨
+	cout << " â”—";
 
 	for (int i = 0; i < SQUARE_NUM - 1; i++)
 	{
-		cout << "„ª„³";
+		cout << "â”â”»";
 	}
 
-	cout << "„ª„®" << endl;
+	cout << "â”â”›" << endl;
 }

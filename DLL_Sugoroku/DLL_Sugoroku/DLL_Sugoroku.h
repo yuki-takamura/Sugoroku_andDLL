@@ -30,7 +30,8 @@ private :
 	int turn;
 	std::string squareName[SQUARE_NUM];
 	Player player;
-
+	
+	
 	void initialize();
 	void update();
 	void draw();

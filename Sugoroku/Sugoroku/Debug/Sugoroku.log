@@ -1,3 +1,5 @@
 ﻿  Main.cpp
-  Sugoroku.vcxproj -> C:\Users\game\Desktop\PWS3\Sugoroku\Sugoroku\Debug\Sugoroku.exe
-  Sugoroku.vcxproj -> C:\Users\game\Desktop\PWS3\Sugoroku\Sugoroku\Debug\Sugoroku.pdb (Full PDB)
+d:\pws3\sugoroku\sugoroku\sugoroku\dll_sugoroku.h(31): warning C4251: 'CDLL_Sugoroku::squareName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CDLL_Sugoroku'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  Sugoroku.vcxproj -> D:\PWS3\Sugoroku\Sugoroku\Debug\Sugoroku.exe
+  Sugoroku.vcxproj -> D:\PWS3\Sugoroku\Sugoroku\Debug\Sugoroku.pdb (Full PDB)

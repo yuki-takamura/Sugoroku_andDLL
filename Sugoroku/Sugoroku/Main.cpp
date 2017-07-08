@@ -5,11 +5,12 @@ using namespace std;
 
 int main()
 {
-	CDLL_Sugoroku sugoroku;
-
-	cout << sugoroku.add(2, 3) << endl;
+	CDLL_Sugoroku sugoroku(6);
 
 	sugoroku.run();
 
-	return 0;
+	cout << sugoroku.checkTurn() << "回でゴールしました" << endl;
+
+	cout << "エンターキー入力で終了します" << endl;
+	while (getchar() != '\n');//エンターキー入力で次に移る
 }

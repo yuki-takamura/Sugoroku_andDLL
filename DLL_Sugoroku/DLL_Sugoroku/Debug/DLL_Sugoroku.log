@@ -1,4 +1,9 @@
 ﻿  DLL_Sugoroku.cpp
-     Creating library C:\Users\game\Desktop\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.lib and object C:\Users\game\Desktop\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.exp
-  DLL_Sugoroku.vcxproj -> C:\Users\game\Desktop\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.dll
-  DLL_Sugoroku.vcxproj -> C:\Users\game\Desktop\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.pdb (Full PDB)
+d:\pws3\sugoroku\dll_sugoroku\dll_sugoroku\dll_sugoroku.h(31): warning C4251: 'CDLL_Sugoroku::squareName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CDLL_Sugoroku'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Player.cpp
+     Creating library D:\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.lib and object D:\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.exp
+  DLL_Sugoroku.vcxproj -> D:\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.dll
+  DLL_Sugoroku.vcxproj -> D:\PWS3\Sugoroku\DLL_Sugoroku\Debug\DLL_Sugoroku.pdb (Full PDB)

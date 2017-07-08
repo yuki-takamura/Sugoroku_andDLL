@@ -10,4 +10,6 @@ enum Square
 	NORMAL
 };
 
-#define SQUARE_NUM 20
+#define SQUARE_NUM 10
+
+#define MAX_TURN 100

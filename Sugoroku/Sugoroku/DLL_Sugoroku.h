@@ -10,15 +10,29 @@
 #define DLL_SUGOROKU_API __declspec(dllimport)
 #endif
 
+#include <iostream>
+#include <string>
+#include "ConstantMacro.h"
+#include "Player.h"
+
 // This class is exported from the DLL_Sugoroku.dll
-class DLL_SUGOROKU_API CDLL_Sugoroku {
+class DLL_SUGOROKU_API CDLL_Sugoroku
+{
 public:
-	CDLL_Sugoroku(void);
+	CDLL_Sugoroku(int diceNum);
 	// TODO: add your methods here.
-	int add(int a, int b);
+	int checkTurn() { return turn - 2; }
 	void run();
+
+private :
+	bool isGameClear;
+	int diceNum;
+	int turn;
+	std::string squareName[SQUARE_NUM];
+	Player player;
+
+	void initialize();
+	void update();
+	void draw();
+	void drawMap();
 };
-
-extern DLL_SUGOROKU_API int nDLL_Sugoroku;
-
-DLL_SUGOROKU_API int fnDLL_Sugoroku(void);
